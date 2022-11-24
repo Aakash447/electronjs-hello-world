@@ -1,0 +1,34 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "Hello World App",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "dist:linux": "electron-packager . --linux",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.70",
+    "@electron-forge/maker-deb": "^6.0.0-beta.70",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.70",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.70",
+    "@electron-forge/maker-zip": "^6.0.0-beta.70",
+    "electron": "^21.1.1"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "build": {
+    "appId": "first-app",
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "category": "Utility"
+    }
+  }
+}
